@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Portfolio Projects - Project 1 </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../../style.css" />
+</head>
+<body>
+	<header id="branding">
+		<h1>Personal and industrial products by Kyle Watson</h1>
+		<nav id="navigation">
+			<h2> Navigation </h2>
+			<ul>
+				<li class="nav"><a href="../../index.html"> Home </a></li>
+				<li class="nav"><a href="../../personal.html"> Personal Bio </a></li>
+				<li class="title-nested"> <a> Projects </a>
+					<ol>
+						<li class="nested-item"><a href="proj1.html"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
+						<li class="nested-item"><a href="../project2/proj2.html"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
+						<li class="nested-item"> More Coming Soon! </li>
+					</ol>
+				</li>
+				<li class="nav"><a href="../../contact.html"> Contact me </a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<!-- Content starts here -->
+		<aside>
+			<h2> <abbr title="Universal Serial Bus">USB</abbr> Backup (C++) </h2>
+			<p>
+				This page showcases a project I am currently working on in order to learn
+				more about C++ and it will also have practical uses. It is currently only
+				in pre-alpha.
+			</p>
+			<ul>
+				<li><a href="#source">Source Code</a></li>
+				<li><a href="#use">Usage and Compile Script</a></li>
+				<li><a href="#downloads">Downloads</a></li>
+				<li><a href="#description">Description</a></li>
+			</ul>
+		</aside>
+		<section id="source">
+			<h3> Source Code </h3>
+			<p class="details">
+				This code is a <em>work in progress</em> and many features will be added as well as errors to be expected.
+			</p>
+			<h4>Main C++ File (boosteg.cpp)</h4>
+			<pre>
+				<code>
+#include &lt;iostream&gt;
+#include &lt;iterator&gt;
+#include &lt;algorithm&gt;
+#include &lt;boost/filesystem.hpp&gt;
+using namespace std;
+using namespace boost::filesystem;
+bool copyDir(boost::filesystem::path const &amp; source,
+ boost::filesystem::path const &amp; destination);
+void backUpEdited(path workPath, path altPath);
+
+int main()
+{
+	path kyleMediaPath (&quot;/media/kyle&quot;);
+	path stcMediaPath (&quot;/media/stc905&quot;);
+	path workingMediaPath;
+	path webLaptopSoftPath (&quot;/home/kyle/Documents/Software_Eng/Web_Dev&quot;);
+	path progLaptopSoftPath (&quot;/home/kyle/Documents/Software_Eng/Programming&quot;);
+	path dbsLaptopSoftPath (&quot;/home/kyle/Documents/Software_Eng/Databases&quot;);
+	const string UBTDEV = &quot;/UBUNTU 16_0&quot;;
+	const string WINDEV = &quot;/J_CCSA_X64FRE_EN-US_DV5&quot;;
+	const string PROG = &quot;/Software Eng/Programming&quot;;
+	const string WEB = &quot;/Software Eng/Web Dev&quot;;
+	const string DBS = &quot;/Software Eng/Databases&quot;;
+	path testpath (&quot;/media/kyle/UBUNTU 16_0/Software Eng/Programming/testfold&quot;);
+	path testpath1 (&quot;/media/kyle/J_CCSA_X64FRE_EN-US_DV5/Software Eng/Programming/testfold&quot;);
+	cout &lt;&lt; copyDir(testpath,testpath1) &lt;&lt; endl;
+	try{
+		if(exists(kyleMediaPath)){
+			workingMediaPath = kyleMediaPath;
+			cout &lt;&lt; &quot;Kyle Media Path&quot; &lt;&lt; endl;
+		}else if(exists(stcMediaPath)){
+			workingMediaPath = stcMediaPath;
+			cout &lt;&lt; &quot;STC Media Path&quot; &lt;&lt; endl;
+		}else{
+			cout &lt;&lt; &quot;No recognisable /media/ path exiting&quot; &lt;&lt; endl;
+			return 1;
+		}
+		directory_iterator end_itr;
+		vector&lt;string&gt; dirs;
+		for (directory_iterator itr(workingMediaPath); itr != end_itr; itr++){
+			string pathToString = itr-&gt;path().string();
+			path workingDevPath;
+			path altDevPath;
+			if(pathToString == workingMediaPath.string()+ UBTDEV){
+				workingDevPath = path(workingMediaPath.string() + UBTDEV);
+				altDevPath = path(workingMediaPath.string() + WINDEV);
+			}else if(pathToString == workingMediaPath.string() +WINDEV){
+				altDevPath = path(workingMediaPath.string() + UBTDEV);
+				workingDevPath = path(workingMediaPath.string() + WINDEV);
+			}else{
+				cout &lt;&lt; &quot;No media inserted, exiting&quot; &lt;&lt; endl;
+				return 1;
+			}
+			cout &lt;&lt; &quot;Working path is: &quot; + workingDevPath.string() &lt;&lt; endl;
+			path devProgPath (workingDevPath.string() + PROG);
+			path devWebPath (workingDevPath.string() + WEB);
+			path devDBSPath (workingDevPath.string() + DBS);
+			if(exists(altDevPath)){
+				path altDevProgPath (altDevPath.string() + PROG);
+				path altDevWebPath (altDevPath.string() + WEB);
+				path altDevDBSPath (altDevPath.string() + DBS);
+				backUpEdited(devProgPath, altDevProgPath);
+			}
+		}
+	}
+	catch (const filesystem_error&amp; ex){
+		cout &lt;&lt; ex.what() &lt;&lt; '\n';
+	}
+	return 0;
+}
+
+void backUpEdited(path workPath, path altPath){
+	try{
+		directory_iterator end_itr;
+		for(directory_iterator itr(altPath); itr != end_itr; itr++){
+			if(is_directory(itr-&gt;path())){
+				string endOfPath = itr-&gt;path().string().substr(altPath.string().length());
+				cout &lt;&lt; &quot;End of Path: &quot; &lt;&lt; endl;;
+				cout &lt;&lt; endOfPath &lt;&lt; endl;
+				path dupPath (workPath.string()+endOfPath);
+				cout &lt;&lt; &quot;Dup Path: &quot; &lt;&lt; endl;
+				cout &lt;&lt; dupPath.string() &lt;&lt; endl;
+				if(exists(dupPath)){
+					if(last_write_time(dupPath) != last_write_time(itr-&gt;path())){
+						cout &lt;&lt; &quot;Last Mod Dup&quot;; cout &lt;&lt; last_write_time(dupPath) &lt;&lt; endl;
+						time_t now = time(0);
+						cout &lt;&lt; ctime(&amp;now) &lt;&lt; endl;
+						path newPath (dupPath.string() + &quot;_&quot; + ctime(&amp;now));
+						cout &lt;&lt; copyDir(itr-&gt;path(),newPath) &lt;&lt; endl;
+					}
+				}else{
+					copyDir(itr-&gt;path(),dupPath);
+					cout &lt;&lt; &quot;New copy!&quot; &lt;&lt; endl;
+				}
+			}
+		}
+	}
+	catch (const filesystem_error&amp; ex){
+		cout &lt;&lt; ex.what() &lt;&lt; '\n';
+	}
+}
+
+/*Code For copying directories recursively from StackOverflow Answer:
+ *http://stackoverflow.com/questions/8593608/how-can-i-copy-a-directory-using-boost-filesystem
+ *Courtesey of: nijansen
+ *Usage: copyDir(boost::filesystem::path(&quot;/home/nijansen/test&quot;), boost::filesystem::path(&quot;/home/nijansen/test_copy&quot;));
+ */
+
+bool copyDir(
+    boost::filesystem::path const &amp; source,
+    boost::filesystem::path const &amp; destination
+)
+{
+    namespace fs = boost::filesystem;
+    try
+    {
+        // Check whether the function call is valid
+        if(
+            !fs::exists(source) ||
+            !fs::is_directory(source)
+        )
+        {
+            std::cerr &lt;&lt; &quot;Source directory &quot; &lt;&lt; source.string()
+                &lt;&lt; &quot; does not exist or is not a directory.&quot; &lt;&lt; '\n'
+            ;
+            return false;
+        }
+        if(fs::exists(destination))
+        {
+            std::cerr &lt;&lt; &quot;Destination directory &quot; &lt;&lt; destination.string()
+                &lt;&lt; &quot; already exists.&quot; &lt;&lt; '\n'
+            ;
+            return false;
+        }
+        // Create the destination directory
+        if(!fs::create_directory(destination))
+        {
+            std::cerr &lt;&lt; &quot;Unable to create destination directory&quot;
+                &lt;&lt; destination.string() &lt;&lt; '\n'
+            ;
+            return false;
+        }
+    }
+    catch(fs::filesystem_error const &amp; e)
+    {
+        std::cerr &lt;&lt; e.what() &lt;&lt; '\n';
+        return false;
+    }
+    // Iterate through the source directory
+    for(
+        fs::directory_iterator file(source);
+        file != fs::directory_iterator(); ++file
+    )
+    {
+        try
+        {
+            fs::path current(file-&gt;path());
+            if(fs::is_directory(current))
+            {
+                // Found directory: Recursion
+                if(
+                    !copyDir(
+                        current,
+                        destination / current.filename()
+                    )
+                )
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                // Found file: Copy
+                fs::copy_file(
+                    current,
+                    destination / current.filename()
+                );
+            }
+        }
+        catch(fs::filesystem_error const &amp; e)
+        {
+            std:: cerr &lt;&lt; e.what() &lt;&lt; '\n';
+        }
+    }
+    return true;
+}
+				</code>
+			</pre>
+		</section>
+		<section id="use">
+			<h3> Usage and Compile Script </h3>
+			<p>
+				To use the program just plug in the backup devices and launch it.
+				I made a simple shell script to compile and run the program for testing purposes.
+				<em>This is <strong>definitely</strong> the incorrect way to do this</em> but it was a quick solution so I could
+				get started on programming a prototype sooner.
+				The C++ file is named <output>boosteg.cpp</output> and the program is called <output>boostprog</output>
+			</p>
+			<h4>Shell Script (compr.sh)</h4>
+			<output>sh compr.sh</output>
+			<pre>
+				<code>
+g++ -o /home/kyle/Documents/c++-projects/boostprog /home/kyle/Documents/c++-projects/boosteg.cpp -lboost_filesystem -lboost_system;
+/home/kyle/Documents/c++-projects/boostprog
+				</code>
+			</pre>
+		</section>
+		<section id="downloads">
+			<h3>Downloads</h3>
+			<ul>
+				<li><a href="downloads/boosteg.cpp" target="_blank">Source Code (boosteg.cpp)</a></li>
+				<li><a href="downloads/boostprog" target="_blank">Compiled Program [Ubuntu x64] (boostprog)</a></li>
+				<li><a href="downloads/compr.sh" target="_blank">Compile Script (compr.sh)</a></li>
+				<li><a href="images/output.png" target="_blank">Output Example Screenshot (output.png)</a></li>
+			</ul>
+		</section>
+		<section id="description">
+			<h3> Description </h3>
+			<p>
+				This application is written in C++ and eventually once finished it will be cross platform. The source should be
+				compilable on any platform which was my incentive for choosing the <a href="http://www.boost.org/" target="_blank">
+				Boost library</a> to manipulate the filesystem. The purpose of the application is to find the most recent
+				directory or file that has been modified on the module root of one of 4 backup locations:
+			</p>
+			<ul>
+				<li><abbr title="Universal Serial Bus">USB</abbr> Flash Drive</li>
+				<li><abbr title="Secure Digital">SD</abbr> Card</li>
+				<li>Laptop <abbr title="Hard Disk Drive">HDD</abbr></li>
+				<li>University Network Storage</li>
+			</ul>
+			<p>
+				Then the program will copy this directory or file to the other backup locations and append the date it was last
+				modified to the name.
+				At the moment the program only copies directories but files will be working in the near future.
+			</p>
+			<figure>
+				<img src="images/output.png" height="119" width="307" alt="Screenshot of example directory" />
+				<figcaption>
+					Screenshot of file system showing a copied directory with the date appended to the file name
+					This is an example of what the program would do if a folder called <output>Workshop2</output> was edited on a
+					backup device later than the folder on this device was edited. The original directory has been copied
+					and the date has been appended to its name.
+				</figcaption>
+			</figure>
+		</section>
+		<!-- Content ends here -->
+	</main>
+	<footer id="contact">
+		<address>
+			Created by some <a href="mailto:k.j.watson1@edu.salford.ac.uk">guy</a>
+			.
+		</address>
+		<p>Last Modified: 30/09/16 12:37</p>
+	</footer>
+</body>
+</html>
