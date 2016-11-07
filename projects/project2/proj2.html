@@ -184,7 +184,7 @@ namespace WindowsService1
 				<li><a href="downloads/Service1.cs" target="_blank">Service File (Service1.cs)</a></li>
 				<li><a href="downloads/ProjectInstaller.Designer.cs" target="_blank">Service Design (ProjectInstaller.Designer.cs)</a></li>
 				<li><a href="downloads/project.zip" target="_blank">Visual Studio Project (project.zip)</a></li>
-				<li><a href="images/gta.jpg" target="_blank">Game Screenshot (gta.jpg)</a></li>
+				<li><a href="images/gta2.jpg" target="_blank">Game Screenshot (gta2.jpg)</a></li>
 			</ul>
 		</section>
 		<section id="description">
@@ -195,16 +195,15 @@ namespace WindowsService1
 				<abbr title="Executable">exe</abbr> has been launched or if the
 				<abbr title="Scarlet Crush Productions">SCP</abbr> <abbr title="Play Station 3">PS3</abbr> controller driver
 				has been launched. If either of these have it will set the process priority to high.
-				This solved a graphics issue where textures were not loading into the game quick enough, although just changing
+				This solved a graphics issue where textures were not loading into the game quick enough <a href="https://www.reddit.com/r/pcmasterrace/comments/32ib6y/anyone_else_getting_these_texture_bugs_gta_v/" target="_blank">(pop-in example [reddit.com thread by:Jakey120])</a>, although just changing
 				the priority of the game executable slowed down the controller driver causing bad latency. This is why the
 				driver priority also needed to be changed.
 			</p>
 			<figure>
-				<img src="images/gta.jpg" height="256" width="320" alt="Screenshot the GTA V game with the bug occurring pre-fix"/>
+				<img src="images/gta2.jpg" height="450" width="800" alt="Screenshot of the GTA V game"/>
 				<figcaption>
-					This is what the bug looks like before the fix is applied. As you can see the texture for the street
-					and pavement haven't loaded at all. The textures for the buildings are still in a very low
-					<abbr title="level of detail">LOD</abbr> state.
+					This is what the should look like after the fix is applied. All the textures have loaded in properly and
+					the performance is acceptable.
 				</figcaption>
 			</figure>
 		</section>
@@ -212,10 +211,17 @@ namespace WindowsService1
 	</main>
 	<footer id="contact">
 		<address>
-			Created by some <a href="mailto:k.j.watson1@edu.salford.ac.uk">guy</a>
-			.
+			Created by some <a href="mailto:k.j.watson1@edu.salford.ac.uk">guy</a>.
 		</address>
-		<p>Last Modified: 30/09/16 12:37</p>
+		<p>Last Modified: 07/11/16 14:28</p>
+		<nav id="bottom-nav">
+			<p>
+				<ul>
+					<li><a href="#">Back to the top.</a></li>
+					<li id="back-button"><a href="../project1/proj1.html">Previous project.</a></li>
+				</ul>
+			</p>
+		</nav>
 	</footer>
 </body>
 </html>
