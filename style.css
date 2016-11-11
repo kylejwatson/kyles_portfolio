@@ -1,12 +1,31 @@
 body {
 	font-family: Arial;
-	font-size: medium;
 	background-color: #EEEEEE;
+	width:90%;
 }
+
+#branding {
+	width: 100%;
+}
+
 h1 {
 	background-color: #E6CCFF;
 	color: #0099CC;
+	width: 100%;
 }
+
+main {
+	width:90%;
+}
+
+p{
+	width:100%;
+}
+
+section{
+	width:100%;
+}
+
 li.nested-item {
 	display: none;
 }
@@ -24,6 +43,10 @@ a:visited {
 a:hover {
 	text-decoration: underline;
 }
+table{
+	width:100%;
+	overflow: hidden;
+}
 table, td {
 	border: 1px solid #000000;
 }
@@ -34,6 +57,7 @@ aside {
 	position:fixed;
 	right: 50px;
 	bottom: 50px;
+	display:none;
 }
 pre{
 	max-height: 300px;
@@ -44,6 +68,15 @@ pre{
 img {
 	padding: 5px;
 	border: 1px solid #000000;
+	max-width: 100%;
+	height: auto;
+}
+dd{
+	display:none;
+}
+
+dt:hover + dd{
+	display:block;
 }
 em {
 	text-decoration: underline;
@@ -51,4 +84,13 @@ em {
 strong {
 	color: red;
 	text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px){
+	table{
+		display:none;
+	}
+	#timetable:hover table{
+		display:table;
+	}
 }
