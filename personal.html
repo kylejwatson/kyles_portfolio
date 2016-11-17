@@ -8,34 +8,34 @@
 </head>
 <body>
 	<header id="branding">
-		<h1>A casual portfolio for Kyle Watson</h1>
+		<h1 class="row col-12">Personal Bio</h1>
 		<nav id="navigation">
 			<h2> Navigation </h2>
-			<ul>
-				<li><a href="index.html"> Home </a></li>
-				<li><a href="personal.html"> Personal Bio </a></li>
-				<li class="title-nested"> <a> Projects </a>
-					<ol>
-						<li class="nested-item"><a href="projects/project1/proj1.html"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
-						<li class="nested-item"><a href="projects/project2/proj2.html"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
-						<li class="nested-item"> More Coming Soon! </li>
-					</ol>
+			<ul class="row">
+				<li class="col-3"><a href="index.html"> Home </a></li>
+				<li class="col-3"><a href="personal.html"> Personal Bio </a></li>
+				<li class="title-nested col-3"> <a> Projects </a>
+					<ul class="nested-list">
+						<li><a href="projects/project1/proj1.html"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
+						<li><a href="projects/project2/proj2.html"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
+						<li><a> More Coming Soon! </a></li>
+					</ul>
 				</li>
-				<li><a href="contact.html"> Contact me </a></li>
+				<li class="col-3"><a href="contact.html"> Contact me </a></li>
 			</ul>
 		</nav>
 	</header>
+	<aside>
+		<h2> Personal Overview</h2>
+		<p> This Section gives a general overview of my personality, including:</p>
+		<ul>
+			<li><a href="#interests">Interests</a></li>
+			<li><a href="#timetable">Timetable</a></li>
+			<li><a href="#photo">Photo</a></li>
+		</ul>
+	</aside>
 	<main>
 		<!-- Content starts here -->
-		<aside>
-			<h2> Personal Overview</h2>
-			<p> This Section gives a general overview of my personality, including:</p>
-			<ul>
-				<li><a href="#interests">Interests</a></li>
-				<li><a href="#timetable">Timetable</a></li>
-				<li><a href="#photo">Handsome Photo</a></li>
-			</ul>
-		</aside>
 		<section id="interests">
 			<h3> Interests </h3>
 			<p>
@@ -68,7 +68,10 @@
 				<dt>CSI-Linux</dt>
 				<dd>Computer System Internals and Linux is a module split into learning about the fundamentals of computers such as there hardware and binary manipulation, as well as a section on learning how to use the <abbr title="Command Line Interface">CLI</abbr> of Linux Distros correctly and efficiently.</dd>
 			</dl>
-			<table>
+			<p id="table-popup">
+				<a href="table-popup.html" target="_blank">Veiw Timetable</a>
+			</p>
+			<table class="primary">
 				<thead>
 					<tr>
 						<th> Days </th>
@@ -146,7 +149,7 @@
 			</table>
 		</section>
 		<section id="photo">
-			<h3> Photo </h3>
+			<h3> Handsome Photo </h3>
 			<figure>
 				<img src="images/selfie-s.jpg" height="384" width="216" alt="A selfie of my face." />
 				<figcaption>
@@ -158,7 +161,7 @@
 	</main>
 	<footer id="contact">
 		<address>
-			Created by some <a href="mailto:k.j.watson1@edu.salford.ac.uk">guy</a>.
+			Created by some <a href="mailto:k.j.watson1@edu.salford.ac.uk">guy.</a>
 		</address>
 		<p>Last Modified: 07/11/16 14:20</p>
 		<nav id="bottom-nav">
