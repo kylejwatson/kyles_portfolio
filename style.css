@@ -10,29 +10,36 @@
 body {
 	font-family: Quicksand, Arial, Helvetica, sans-serif;
 	font-size:100%;
-	background-color: #EEEEEE;
+	background-color: #eefaff;
 	width:100%;
 	margin: 0;
 	/*text-transform: lowercase;*/
+}
+
+[class*="col-1"] {width: 8.33%;}
+[class*="col-2"] {width: 16.66%;}
+[class*="col-3"] {width: 25%;}
+[class*="col-4"] {width: 33.33%;}
+[class*="col-5"] {width: 41.66%;}
+[class*="col-6"] {width: 50%;}
+[class*="col-7"] {width: 58.33%;}
+[class*="col-8"] {width: 66.66%;}
+[class*="col-9"] {width: 75%;}
+[class*="col-10"] {width: 83.33%;}
+[class*="col-11"] {width: 91.66%;}
+[class*="col-12"] {width: 100%;}
+
+/*figure out how to make the aside scale correctly if it has 3 or 4 elements*/
+
+footer > * , footer > * > *{
+	display:inline;
+	margin-right: 3%;
 }
 
 [class*="col-"] {
 	float: left;
 	padding: 10px;
 }
-
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
 
 .row::after {
 	content: "";
@@ -47,7 +54,7 @@ header{
 h1 {
 	margin:0;
 	background-color: #cbb6ca;
-	color: #d4e3ee;
+	color: #eefaff;
 }
 
 #navigation > h2 {
@@ -119,15 +126,16 @@ aside {
 }
 pre{
 	max-height: 300px;
-	width: 900px;
+	width: 90%;
 	overflow: scroll;
 	border: 1px solid #000000;
 }
 img {
-	padding: 1%;
-	border: 1px solid #000000;
+	margin: 1%;
+	border: 7px solid #ffe3f6;
 	max-width: 100%;
 	height: auto;
+	border-radius: 12px;
 }
 dd{
 	display:none;
@@ -148,17 +156,16 @@ strong {
 	text-decoration: underline;
 }
 
+textarea{
+	max-widht:100%;
+}
+
 #table-popup{
 	display:none;
 }
 
 footer{
 	padding:15px;
-}
-
-footer > * , footer > * > *{
-	display:inline;
-	margin-right: 3%;
 }
 
 @media only screen and (max-width: 1015px){
@@ -190,15 +197,17 @@ footer > * , footer > * > *{
 	}
 
 	footer{
-		margin-bottom:60px;
+		margin-bottom:80px;
 	}
 }
 
-@media only screen and (max-width: 768px){
+
+@media only screen and (max-width: 768px) {
 	[class*="col-"] {
 		width: 100%;
 	}
+
 	footer > * {
-		display:block;
+		display: block;
 	}
 }

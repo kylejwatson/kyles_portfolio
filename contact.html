@@ -4,31 +4,32 @@
 	<title> Kyle Watson's Portfolio - Contact</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
 	<header id="branding">
-		<h1>A casual portfolio for Kyle Watson</h1>
+		<h1 class="row col-12">Contact Me</h1>
+		<nav id="navigation">
+			<h2> Navigation </h2>
+			<ul class="row">
+				<li class="col-3"><a href="index.html"> Home </a></li>
+				<li class="col-3"><a href="personal.html"> Personal Bio </a></li>
+				<li class="title-nested col-3"> <a> Projects </a>
+					<ul class="nested-list">
+						<li><a href="projects/project1/"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
+						<li><a href="projects/project2/"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
+						<li> More Coming Soon! </li>
+					</ul>
+				</li>
+				<li class="col-3"><a href="contact.html"> Contact me </a></li>
+			</ul>
+		</nav>
 	</header>
-	<nav id="navigation">
-		<h2> Navigation </h2>
-		<ul>
-			<li><a href="index.html"> Home </a></li>
-			<li><a href="personal.html"> Personal Bio </a></li>
-			<li class="title-nested"> <a> Projects </a>
-				<ol>
-					<li class="nested-item"><a href="projects/project1/proj1.html"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
-					<li class="nested-item"><a href="projects/project2/proj2.html"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
-					<li class="nested-item"> More Coming Soon! </li>
-				</ol>
-			</li>
-			<li><a href="contact.html"> Contact me </a></li>
-		</ul>
-	</nav>
 	<!-- Content starts here -->
 	<main>
 		<h2> Contact Me </h2>
 		<p>
-			<strong> The contact form is not yet working. I will also be adding an actual GitHub page and a LinkedIn account. </strong>
+			<strong> The contact form is not yet working. I will also be adding an actual LinkedIn account. </strong>
 			<em>You can still find me at The University of Salford during the contact hours listed on my timetable and you can email
 			me on my university email listed at the bottom of every page.</em>
 		</p>
@@ -36,13 +37,12 @@
 		<form action="#" enctype="text/plain" method="post">
 			<p>Name: <input name="Name" type="text" id="Name"></p>
 			<p>E-mail address: <input name="E-mail" type="text" id="E-mail"></p>
-			<p>Comment:</p>
-			<p><textarea name="Comment" id="Comment"></textarea></p>
+			<p>Comment: <textarea name="Comment" id="Comment"></textarea></p>
 			<p><input type="submit" name="Submit" id="Submit" value="Submit"></p>
 		</form>
 		<h3>GitHub</h3>
 		<p>
-			<a href="#">www.github.com/realprofilegoeshere</a>
+			<a href="#">www.github.com/kylewatson98</a>
 		</p>
 		<h3>LinkedIn</h3>
 		<p>
@@ -52,7 +52,7 @@
 	<!-- Content ends here -->
 	<footer id="contact">
 		<address>
-			Created by some <a href="mailto:k.j.watson1@edu.salford.ac.uk">guy</a>.
+			Created by some <a href="mailto:k.j.watson1@edu.salford.ac.uk">guy.</a>
 		</address>
 		<p>Last Modified: 07/11/16 14:29</p>
 		<nav id="bottom-nav">
