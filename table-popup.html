@@ -8,25 +8,41 @@
 </head>
 <body>
 	<header id="branding">
-		<h1>Timetable</h1>
+		<h1 class="row col-12">Timetable</h1>
+		<nav id="navigation">
+			<h2> Navigation </h2>
+			<ul class="row">
+				<li class="col-3"><a href="index.html"> Home </a></li>
+				<li class="col-3"><a href="personal.html"> Personal Bio </a></li>
+				<li class="title-nested col-3"> <a> Projects </a>
+					<ul class="nested-list">
+						<li><a href="projects/project1/"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
+						<li><a href="projects/project2/"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
+						<li><a> More Coming Soon!</a></li>
+					</ul>
+				</li>
+				<li class="col-3"><a href="contact.html"> Contact me </a></li>
+			</ul>
+		</nav>
 	</header>
-	<nav id="navigation">
-		<h2> Navigation </h2>
-		<ul>
-			<li><a href="index.html"> Home </a></li>
-			<li><a href="personal.html"> Personal Bio </a></li>
-			<li class="title-nested"> <a> Projects </a>
-				<ol>
-					<li class="nested-item"><a href="projects/project1/proj1.html"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
-					<li class="nested-item"><a href="projects/project2/proj2.html"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
-					<li class="nested-item"> More Coming Soon! </li>
-				</ol>
-			</li>
-			<li><a href="contact.html"> Contact me </a></li>
-		</ul>
-	</nav>
 	<!-- Content starts here -->
 	<main>
+		<h3> Timetable</h3>
+		<p>
+			There are many modules in my uni course, here is a list of there descriptions as well as my contact hours.
+		</p>
+		<dl>
+			<dt>PD+P</dt>
+			<dd>Professional development and practices is a module that focuses on becoming a professional developer that understands how laws are applicable to their work, being able to manage a project as well as helping with study skills.</dd>
+			<dt> WebDevHCI</dt>
+			<dd>Web Development and Human Computer interfaces is all about <abbr title="Hyper Text Markup Language 5"><a href="https://en.wikipedia.org/wiki/HTML5" target="_blank">HTML5</a></abbr> and <abbr title="Cascading Style Sheets"><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank">CSS</a></abbr> and how to <em>correctly write it to the proper standards</em> as well as learning how to create intuitive <abbr title="User Interface">UI</abbr> designs and understanding how websites can be more accessible using these designs. </dd>
+			<dt> DBS </dt>
+			<dd>Database Systems is a module focussing on the creation and use of databases through <abbr title="Structured Query Language">SQL </abbr>and the theory for making correct useful models.</dd>
+			<dt>Programming</dt>
+			<dd>Programming focusses on learning the fundamentals of an object-oriented language through learning how to use Java correctly and following correct conventions.</dd>
+			<dt>CSI-Linux</dt>
+			<dd>Computer System Internals and Linux is a module split into learning about the fundamentals of computers such as there hardware and binary manipulation, as well as a section on learning how to use the <abbr title="Command Line Interface">CLI</abbr> of Linux Distros correctly and efficiently.</dd>
+		</dl>
 		<table>
 			<thead>
 			<tr>
