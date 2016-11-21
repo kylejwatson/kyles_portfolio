@@ -4,6 +4,8 @@
 	<title> Portfolio Projects - Project 2 </title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="../../style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </head>
 <body>
 	<header id="branding">
@@ -17,7 +19,7 @@
 					<ul class="nested-list">
 						<li><a href="../project1"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
 						<li><a href="index.html"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
-						<li> More Coming Soon! </li>
+						<li><a> More Coming Soon! </a></li>
 					</ul>
 				</li>
 				<li class="col-3"><a href="../../contact.html"> Contact me </a></li>
@@ -26,13 +28,13 @@
 	</header>
 	<main>
 		<!-- Content starts here -->
-		<aside>
+		<aside class="aside-4">
 			<h2> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix (C#) </h2>
 			<p>
 				This page showcases a windows service I developed to solve an annoying problem and learn the simplicity of C#.
 			</p>
 			<ul>
-				<li><a href="#source">Source Code</a></li>
+				<li><a href="#source">Source</a></li>
 				<li><a href="#use">Usage</a></li>
 				<li><a href="#downloads">Downloads</a></li>
 				<li><a href="#description">Description</a></li>
@@ -47,8 +49,8 @@
 				programs</strong> running on the machine.
 			</p>
 			<h4>Service File (Service1.cs)</h4>
-			<pre>
-				<code>
+			<pre class="prettyprint linenums">
+				<code class="lang-cs">
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -99,12 +101,11 @@ namespace WindowsService1
         }
     }
 }
-
 				</code>
 			</pre>
 			<h4>Service Design File (ProjectInstaller.Designer.cs)</h4>
-			<pre>
-				<code>
+			<pre class="prettyprint linenums">
+				<code class="lang-cs">
 namespace WindowsService1
 {
     partial class ProjectInstaller

@@ -4,6 +4,8 @@
 	<title> Portfolio Projects - Project 1 </title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="../../style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </head>
 <body>
 	<header id="branding">
@@ -17,7 +19,7 @@
 					<ul class="nested-list">
 						<li><a href="index.html"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
 						<li><a href="../project2/"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
-						<li> More Coming Soon! </li>
+						<li><a> More Coming Soon! </a></li>
 					</ul>
 				</li>
 				<li class="col-3"><a href="../../contact.html"> Contact me </a></li>
@@ -26,7 +28,7 @@
 	</header>
 	<main>
 		<!-- Content starts here -->
-		<aside>
+		<aside class="aside-4">
 			<h2> <abbr title="Universal Serial Bus">USB</abbr> Backup (C++) </h2>
 			<p>
 				This page showcases a project I am currently working on in order to learn
@@ -34,8 +36,8 @@
 				in pre-alpha.
 			</p>
 			<ul>
-				<li><a href="#source">Source Code</a></li>
-				<li><a href="#use">Usage and Compile Script</a></li>
+				<li><a href="#source">Source</a></li>
+				<li><a href="#use">Usage</a></li>
 				<li><a href="#downloads">Downloads</a></li>
 				<li><a href="#description">Description</a></li>
 			</ul>
@@ -46,8 +48,8 @@
 				This code is a <em>work in progress</em> and many features will be added as well as errors to be expected.
 			</p>
 			<h4>Main C++ File (boosteg.cpp)</h4>
-			<pre>
-				<code>
+			<pre class="prettyprint linenums">
+				<code class="lang-cpp">
 #include &lt;iostream&gt;
 #include &lt;iterator&gt;
 #include &lt;algorithm&gt;
@@ -233,7 +235,6 @@ bool copyDir(
         }
     }
     return true;
-}
 				</code>
 			</pre>
 		</section>

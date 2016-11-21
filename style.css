@@ -29,8 +29,6 @@ body {
 [class*="col-11"] {width: 91.66%;}
 [class*="col-12"] {width: 100%;}
 
-/*figure out how to make the aside scale correctly if it has 3 or 4 elements*/
-
 footer > * , footer > * > *{
 	display:inline;
 	margin-right: 3%;
@@ -192,8 +190,15 @@ footer{
 	}
 	aside > ul > li{
 		display:inline;
-		width: 33.33%;
 		float: left;
+		text-align: center;
+		border-right: 1px solid black;
+	}
+	aside.aside-3 > ul > li{
+		width: 33.33%;
+	}
+	aside.aside-4 > ul > li{
+		width: 25%;
 	}
 	aside > h2{
 		display:none;
@@ -217,3 +222,9 @@ footer{
 		display: block;
 	}
 }
+
+/*prettify line numbering*/
+
+li.L0, li.L1, li.L2, li.L3,
+li.L5, li.L6, li.L7, li.L8
+{ list-style-type: decimal !important }
