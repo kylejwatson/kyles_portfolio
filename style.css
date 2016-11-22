@@ -96,6 +96,10 @@ li > a {
 	background-color: #B1E3FA;
 }
 
+#downloads > ul > li > a{
+	width:90%;
+}
+
 li > a:hover {
 	animation-name: a-hover;
 	animation-duration: 0.5s;
@@ -118,9 +122,8 @@ a:hover {
 
 section{
 	background-image: url("images/box.svg");
-	background-size:cover;
-	padding-left: 1.5%;
-	padding-right: 1.5%;
+	background-size: 100% 100%;
+	padding-left: 3.5%;
 	padding-top:1.5%;
 	padding-bottom:0.5%;
 	margin-bottom:10px;
@@ -236,13 +239,6 @@ footer{
 		display: block;
 	}
 }
-
-/*prettify line numbering
-li.L0, li.L1, li.L2, li.L3,
-li.L5, li.L6, li.L7, li.L8
-{ list-style-type: decimal !important }*/
-
-/* desert scheme ported from vim to google prettify */
 pre.prettyprint {
 	display: block;
 	background-color: #97c4da;
@@ -254,6 +250,7 @@ pre.prettyprint {
 }
 div.code{
 	padding:0;
+	margin-bottom:10px;
 	width: 90%;
 	border: 10px solid transparent;
 	border-image: url("images/box2.svg") 10 stretch;
@@ -262,19 +259,3 @@ div.code{
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums { margin-top: 0; margin-bottom: 0; color: white } /* IE indents via margin-left */
 li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8, li.L9 {background-color: #97c4da !important; list-style-type: decimal !important }
-
-
-/*@media print {
-	pre.prettyprint { background-color: none }
-	pre .str, code .str { color: #060 }
-	pre .kwd, code .kwd { color: #006; font-weight: bold }
-	pre .com, code .com { color: #600; font-style: italic }
-	pre .typ, code .typ { color: #404; font-weight: bold }
-	pre .lit, code .lit { color: #044 }
-	pre .pun, code .pun { color: #440 }
-	pre .pln, code .pln { color: #000 }
-	pre .tag, code .tag { color: #006; font-weight: bold }
-	pre .atn, code .atn { color: #404 }
-	pre .atv, code .atv { color: #060 }
-}
-*/
