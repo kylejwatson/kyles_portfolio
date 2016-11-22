@@ -10,10 +10,16 @@
 body {
 	font-family: Quicksand, Arial, Helvetica, sans-serif;
 	font-size:100%;
-	background-color: #eefaff;
+	background-color: #e0f4fc;
+	color: #383f4a;
 	width:100%;
 	margin: 0;
 	/*text-transform: lowercase;*/
+}
+
+*::selection {
+	background-color: #ea316e;
+	color: white;
 }
 
 [class*="col-1"] {width: 8.33%;}
@@ -51,8 +57,8 @@ header{
 
 h1 {
 	margin:0;
-	background-color: #cbb6ca;
-	color: #eefaff;
+	background-color: #ea316e;
+	color: #e0f4fc;
 }
 
 #navigation > h2 {
@@ -80,20 +86,20 @@ ul{
 }
 
 @keyframes a-hover{
-	0% {background-color:#E6CCFF;}
-	100% {background-color: #cbb6ca;}
+	0% {background-color:#B1E3FA;}
+	100% {background-color: #97c4da;}
 }
 
 li > a {
 	display:block;
 	padding:5px;
-	background-color: #E6CCFF;
+	background-color: #B1E3FA;
 }
 
 li > a:hover {
 	animation-name: a-hover;
 	animation-duration: 0.5s;
-	background-color: #cbb6ca;
+	background-color: #97c4da;
 }
 
 main{
@@ -101,15 +107,23 @@ main{
 }
 
 a {
-	color: #3235CB;
 	text-decoration: none;
 }
 a:visited {
-	color: #2A82D8;
-	text-decoration: none;
+	color:inherit;
 }
 a:hover {
-	text-decoration: underline;
+	color:#ea316e;
+}
+
+section{
+	background-image: url("images/box.svg");
+	background-size:cover;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	padding-top:1.5%;
+	padding-bottom:0.5%;
+	margin-bottom:10px;
 }
 table, td {
 	border: 1px solid #000000;
@@ -122,18 +136,18 @@ aside {
 	right: 50px;
 	bottom: 50px;
 }
-pre{
-	max-height: 300px;
-	width: 90%;
-	overflow: scroll;
-	border: 1px solid #000000;
+
+h3{
+	color:#25aae1;
 }
 img {
 	margin: 1%;
-	border: 7px solid #ffe3f6;
+	/*border: 7px solid #ffe3f6;
+	border-radius: 12px;*/
 	max-width: 100%;
 	height: auto;
-	border-radius: 12px;
+	border: 10px solid transparent;
+	border-image: url("images/box2.svg") 10 stretch;
 }
 dd{
 	display:none;
@@ -223,8 +237,44 @@ footer{
 	}
 }
 
-/*prettify line numbering*/
-
+/*prettify line numbering
 li.L0, li.L1, li.L2, li.L3,
 li.L5, li.L6, li.L7, li.L8
-{ list-style-type: decimal !important }
+{ list-style-type: decimal !important }*/
+
+/* desert scheme ported from vim to google prettify */
+pre.prettyprint {
+	display: block;
+	background-color: #97c4da;
+	max-height: 300px;
+
+	overflow: scroll;
+	border:none !important;
+	margin: 0 !important;
+}
+div.code{
+	padding:0;
+	width: 90%;
+	border: 10px solid transparent;
+	border-image: url("images/box2.svg") 10 stretch;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: white } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8, li.L9 {background-color: #97c4da !important; list-style-type: decimal !important }
+
+
+/*@media print {
+	pre.prettyprint { background-color: none }
+	pre .str, code .str { color: #060 }
+	pre .kwd, code .kwd { color: #006; font-weight: bold }
+	pre .com, code .com { color: #600; font-style: italic }
+	pre .typ, code .typ { color: #404; font-weight: bold }
+	pre .lit, code .lit { color: #044 }
+	pre .pun, code .pun { color: #440 }
+	pre .pln, code .pln { color: #000 }
+	pre .tag, code .tag { color: #006; font-weight: bold }
+	pre .atn, code .atn { color: #404 }
+	pre .atv, code .atv { color: #060 }
+}
+*/

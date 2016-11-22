@@ -48,195 +48,197 @@
 				This code is a <em>work in progress</em> and many features will be added as well as errors to be expected.
 			</p>
 			<h4>Main C++ File (boosteg.cpp)</h4>
-			<pre class="prettyprint linenums">
-				<code class="lang-cpp">
-#include &lt;iostream&gt;
-#include &lt;iterator&gt;
-#include &lt;algorithm&gt;
-#include &lt;boost/filesystem.hpp&gt;
-using namespace std;
-using namespace boost::filesystem;
-bool copyDir(boost::filesystem::path const &amp; source,
- boost::filesystem::path const &amp; destination);
-void backUpEdited(path workPath, path altPath);
+			<div class="code">
+				<pre class="prettyprint linenums">
+					<code class="lang-cpp">
+	#include &lt;iostream&gt;
+	#include &lt;iterator&gt;
+	#include &lt;algorithm&gt;
+	#include &lt;boost/filesystem.hpp&gt;
+	using namespace std;
+	using namespace boost::filesystem;
+	bool copyDir(boost::filesystem::path const &amp; source,
+	 boost::filesystem::path const &amp; destination);
+	void backUpEdited(path workPath, path altPath);
 
-int main()
-{
-	path kyleMediaPath (&quot;/media/kyle&quot;);
-	path stcMediaPath (&quot;/media/stc905&quot;);
-	path workingMediaPath;
-	path webLaptopSoftPath (&quot;/home/kyle/Documents/Software_Eng/Web_Dev&quot;);
-	path progLaptopSoftPath (&quot;/home/kyle/Documents/Software_Eng/Programming&quot;);
-	path dbsLaptopSoftPath (&quot;/home/kyle/Documents/Software_Eng/Databases&quot;);
-	const string UBTDEV = &quot;/UBUNTU 16_0&quot;;
-	const string WINDEV = &quot;/J_CCSA_X64FRE_EN-US_DV5&quot;;
-	const string PROG = &quot;/Software Eng/Programming&quot;;
-	const string WEB = &quot;/Software Eng/Web Dev&quot;;
-	const string DBS = &quot;/Software Eng/Databases&quot;;
-	path testpath (&quot;/media/kyle/UBUNTU 16_0/Software Eng/Programming/testfold&quot;);
-	path testpath1 (&quot;/media/kyle/J_CCSA_X64FRE_EN-US_DV5/Software Eng/Programming/testfold&quot;);
-	cout &lt;&lt; copyDir(testpath,testpath1) &lt;&lt; endl;
-	try{
-		if(exists(kyleMediaPath)){
-			workingMediaPath = kyleMediaPath;
-			cout &lt;&lt; &quot;Kyle Media Path&quot; &lt;&lt; endl;
-		}else if(exists(stcMediaPath)){
-			workingMediaPath = stcMediaPath;
-			cout &lt;&lt; &quot;STC Media Path&quot; &lt;&lt; endl;
-		}else{
-			cout &lt;&lt; &quot;No recognisable /media/ path exiting&quot; &lt;&lt; endl;
-			return 1;
-		}
-		directory_iterator end_itr;
-		vector&lt;string&gt; dirs;
-		for (directory_iterator itr(workingMediaPath); itr != end_itr; itr++){
-			string pathToString = itr-&gt;path().string();
-			path workingDevPath;
-			path altDevPath;
-			if(pathToString == workingMediaPath.string()+ UBTDEV){
-				workingDevPath = path(workingMediaPath.string() + UBTDEV);
-				altDevPath = path(workingMediaPath.string() + WINDEV);
-			}else if(pathToString == workingMediaPath.string() +WINDEV){
-				altDevPath = path(workingMediaPath.string() + UBTDEV);
-				workingDevPath = path(workingMediaPath.string() + WINDEV);
+	int main()
+	{
+		path kyleMediaPath (&quot;/media/kyle&quot;);
+		path stcMediaPath (&quot;/media/stc905&quot;);
+		path workingMediaPath;
+		path webLaptopSoftPath (&quot;/home/kyle/Documents/Software_Eng/Web_Dev&quot;);
+		path progLaptopSoftPath (&quot;/home/kyle/Documents/Software_Eng/Programming&quot;);
+		path dbsLaptopSoftPath (&quot;/home/kyle/Documents/Software_Eng/Databases&quot;);
+		const string UBTDEV = &quot;/UBUNTU 16_0&quot;;
+		const string WINDEV = &quot;/J_CCSA_X64FRE_EN-US_DV5&quot;;
+		const string PROG = &quot;/Software Eng/Programming&quot;;
+		const string WEB = &quot;/Software Eng/Web Dev&quot;;
+		const string DBS = &quot;/Software Eng/Databases&quot;;
+		path testpath (&quot;/media/kyle/UBUNTU 16_0/Software Eng/Programming/testfold&quot;);
+		path testpath1 (&quot;/media/kyle/J_CCSA_X64FRE_EN-US_DV5/Software Eng/Programming/testfold&quot;);
+		cout &lt;&lt; copyDir(testpath,testpath1) &lt;&lt; endl;
+		try{
+			if(exists(kyleMediaPath)){
+				workingMediaPath = kyleMediaPath;
+				cout &lt;&lt; &quot;Kyle Media Path&quot; &lt;&lt; endl;
+			}else if(exists(stcMediaPath)){
+				workingMediaPath = stcMediaPath;
+				cout &lt;&lt; &quot;STC Media Path&quot; &lt;&lt; endl;
 			}else{
-				cout &lt;&lt; &quot;No media inserted, exiting&quot; &lt;&lt; endl;
+				cout &lt;&lt; &quot;No recognisable /media/ path exiting&quot; &lt;&lt; endl;
 				return 1;
 			}
-			cout &lt;&lt; &quot;Working path is: &quot; + workingDevPath.string() &lt;&lt; endl;
-			path devProgPath (workingDevPath.string() + PROG);
-			path devWebPath (workingDevPath.string() + WEB);
-			path devDBSPath (workingDevPath.string() + DBS);
-			if(exists(altDevPath)){
-				path altDevProgPath (altDevPath.string() + PROG);
-				path altDevWebPath (altDevPath.string() + WEB);
-				path altDevDBSPath (altDevPath.string() + DBS);
-				backUpEdited(devProgPath, altDevProgPath);
-			}
-		}
-	}
-	catch (const filesystem_error&amp; ex){
-		cout &lt;&lt; ex.what() &lt;&lt; '\n';
-	}
-	return 0;
-}
-
-void backUpEdited(path workPath, path altPath){
-	try{
-		directory_iterator end_itr;
-		for(directory_iterator itr(altPath); itr != end_itr; itr++){
-			if(is_directory(itr-&gt;path())){
-				string endOfPath = itr-&gt;path().string().substr(altPath.string().length());
-				cout &lt;&lt; &quot;End of Path: &quot; &lt;&lt; endl;;
-				cout &lt;&lt; endOfPath &lt;&lt; endl;
-				path dupPath (workPath.string()+endOfPath);
-				cout &lt;&lt; &quot;Dup Path: &quot; &lt;&lt; endl;
-				cout &lt;&lt; dupPath.string() &lt;&lt; endl;
-				if(exists(dupPath)){
-					if(last_write_time(dupPath) != last_write_time(itr-&gt;path())){
-						cout &lt;&lt; &quot;Last Mod Dup&quot;; cout &lt;&lt; last_write_time(dupPath) &lt;&lt; endl;
-						time_t now = time(0);
-						cout &lt;&lt; ctime(&amp;now) &lt;&lt; endl;
-						path newPath (dupPath.string() + &quot;_&quot; + ctime(&amp;now));
-						cout &lt;&lt; copyDir(itr-&gt;path(),newPath) &lt;&lt; endl;
-					}
+			directory_iterator end_itr;
+			vector&lt;string&gt; dirs;
+			for (directory_iterator itr(workingMediaPath); itr != end_itr; itr++){
+				string pathToString = itr-&gt;path().string();
+				path workingDevPath;
+				path altDevPath;
+				if(pathToString == workingMediaPath.string()+ UBTDEV){
+					workingDevPath = path(workingMediaPath.string() + UBTDEV);
+					altDevPath = path(workingMediaPath.string() + WINDEV);
+				}else if(pathToString == workingMediaPath.string() +WINDEV){
+					altDevPath = path(workingMediaPath.string() + UBTDEV);
+					workingDevPath = path(workingMediaPath.string() + WINDEV);
 				}else{
-					copyDir(itr-&gt;path(),dupPath);
-					cout &lt;&lt; &quot;New copy!&quot; &lt;&lt; endl;
+					cout &lt;&lt; &quot;No media inserted, exiting&quot; &lt;&lt; endl;
+					return 1;
+				}
+				cout &lt;&lt; &quot;Working path is: &quot; + workingDevPath.string() &lt;&lt; endl;
+				path devProgPath (workingDevPath.string() + PROG);
+				path devWebPath (workingDevPath.string() + WEB);
+				path devDBSPath (workingDevPath.string() + DBS);
+				if(exists(altDevPath)){
+					path altDevProgPath (altDevPath.string() + PROG);
+					path altDevWebPath (altDevPath.string() + WEB);
+					path altDevDBSPath (altDevPath.string() + DBS);
+					backUpEdited(devProgPath, altDevProgPath);
 				}
 			}
 		}
+		catch (const filesystem_error&amp; ex){
+			cout &lt;&lt; ex.what() &lt;&lt; '\n';
+		}
+		return 0;
 	}
-	catch (const filesystem_error&amp; ex){
-		cout &lt;&lt; ex.what() &lt;&lt; '\n';
+
+	void backUpEdited(path workPath, path altPath){
+		try{
+			directory_iterator end_itr;
+			for(directory_iterator itr(altPath); itr != end_itr; itr++){
+				if(is_directory(itr-&gt;path())){
+					string endOfPath = itr-&gt;path().string().substr(altPath.string().length());
+					cout &lt;&lt; &quot;End of Path: &quot; &lt;&lt; endl;;
+					cout &lt;&lt; endOfPath &lt;&lt; endl;
+					path dupPath (workPath.string()+endOfPath);
+					cout &lt;&lt; &quot;Dup Path: &quot; &lt;&lt; endl;
+					cout &lt;&lt; dupPath.string() &lt;&lt; endl;
+					if(exists(dupPath)){
+						if(last_write_time(dupPath) != last_write_time(itr-&gt;path())){
+							cout &lt;&lt; &quot;Last Mod Dup&quot;; cout &lt;&lt; last_write_time(dupPath) &lt;&lt; endl;
+							time_t now = time(0);
+							cout &lt;&lt; ctime(&amp;now) &lt;&lt; endl;
+							path newPath (dupPath.string() + &quot;_&quot; + ctime(&amp;now));
+							cout &lt;&lt; copyDir(itr-&gt;path(),newPath) &lt;&lt; endl;
+						}
+					}else{
+						copyDir(itr-&gt;path(),dupPath);
+						cout &lt;&lt; &quot;New copy!&quot; &lt;&lt; endl;
+					}
+				}
+			}
+		}
+		catch (const filesystem_error&amp; ex){
+			cout &lt;&lt; ex.what() &lt;&lt; '\n';
+		}
 	}
-}
 
-/*Code For copying directories recursively from StackOverflow Answer:
- *http://stackoverflow.com/questions/8593608/how-can-i-copy-a-directory-using-boost-filesystem
- *Courtesey of: nijansen
- *Usage: copyDir(boost::filesystem::path(&quot;/home/nijansen/test&quot;), boost::filesystem::path(&quot;/home/nijansen/test_copy&quot;));
- */
+	/*Code For copying directories recursively from StackOverflow Answer:
+	 *http://stackoverflow.com/questions/8593608/how-can-i-copy-a-directory-using-boost-filesystem
+	 *Courtesey of: nijansen
+	 *Usage: copyDir(boost::filesystem::path(&quot;/home/nijansen/test&quot;), boost::filesystem::path(&quot;/home/nijansen/test_copy&quot;));
+	 */
 
-bool copyDir(
-    boost::filesystem::path const &amp; source,
-    boost::filesystem::path const &amp; destination
-)
-{
-    namespace fs = boost::filesystem;
-    try
-    {
-        // Check whether the function call is valid
-        if(
-            !fs::exists(source) ||
-            !fs::is_directory(source)
-        )
-        {
-            std::cerr &lt;&lt; &quot;Source directory &quot; &lt;&lt; source.string()
-                &lt;&lt; &quot; does not exist or is not a directory.&quot; &lt;&lt; '\n'
-            ;
-            return false;
-        }
-        if(fs::exists(destination))
-        {
-            std::cerr &lt;&lt; &quot;Destination directory &quot; &lt;&lt; destination.string()
-                &lt;&lt; &quot; already exists.&quot; &lt;&lt; '\n'
-            ;
-            return false;
-        }
-        // Create the destination directory
-        if(!fs::create_directory(destination))
-        {
-            std::cerr &lt;&lt; &quot;Unable to create destination directory&quot;
-                &lt;&lt; destination.string() &lt;&lt; '\n'
-            ;
-            return false;
-        }
-    }
-    catch(fs::filesystem_error const &amp; e)
-    {
-        std::cerr &lt;&lt; e.what() &lt;&lt; '\n';
-        return false;
-    }
-    // Iterate through the source directory
-    for(
-        fs::directory_iterator file(source);
-        file != fs::directory_iterator(); ++file
-    )
-    {
-        try
-        {
-            fs::path current(file-&gt;path());
-            if(fs::is_directory(current))
-            {
-                // Found directory: Recursion
-                if(
-                    !copyDir(
-                        current,
-                        destination / current.filename()
-                    )
-                )
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                // Found file: Copy
-                fs::copy_file(
-                    current,
-                    destination / current.filename()
-                );
-            }
-        }
-        catch(fs::filesystem_error const &amp; e)
-        {
-            std:: cerr &lt;&lt; e.what() &lt;&lt; '\n';
-        }
-    }
-    return true;
-				</code>
-			</pre>
+	bool copyDir(
+		boost::filesystem::path const &amp; source,
+		boost::filesystem::path const &amp; destination
+	)
+	{
+		namespace fs = boost::filesystem;
+		try
+		{
+			// Check whether the function call is valid
+			if(
+				!fs::exists(source) ||
+				!fs::is_directory(source)
+			)
+			{
+				std::cerr &lt;&lt; &quot;Source directory &quot; &lt;&lt; source.string()
+					&lt;&lt; &quot; does not exist or is not a directory.&quot; &lt;&lt; '\n'
+				;
+				return false;
+			}
+			if(fs::exists(destination))
+			{
+				std::cerr &lt;&lt; &quot;Destination directory &quot; &lt;&lt; destination.string()
+					&lt;&lt; &quot; already exists.&quot; &lt;&lt; '\n'
+				;
+				return false;
+			}
+			// Create the destination directory
+			if(!fs::create_directory(destination))
+			{
+				std::cerr &lt;&lt; &quot;Unable to create destination directory&quot;
+					&lt;&lt; destination.string() &lt;&lt; '\n'
+				;
+				return false;
+			}
+		}
+		catch(fs::filesystem_error const &amp; e)
+		{
+			std::cerr &lt;&lt; e.what() &lt;&lt; '\n';
+			return false;
+		}
+		// Iterate through the source directory
+		for(
+			fs::directory_iterator file(source);
+			file != fs::directory_iterator(); ++file
+		)
+		{
+			try
+			{
+				fs::path current(file-&gt;path());
+				if(fs::is_directory(current))
+				{
+					// Found directory: Recursion
+					if(
+						!copyDir(
+							current,
+							destination / current.filename()
+						)
+					)
+					{
+						return false;
+					}
+				}
+				else
+				{
+					// Found file: Copy
+					fs::copy_file(
+						current,
+						destination / current.filename()
+					);
+				}
+			}
+			catch(fs::filesystem_error const &amp; e)
+			{
+				std:: cerr &lt;&lt; e.what() &lt;&lt; '\n';
+			}
+		}
+		return true;
+					</code>
+				</pre>
+			</div>
 		</section>
 		<section id="use">
 			<h3> Usage and Compile Script </h3>
@@ -249,12 +251,14 @@ bool copyDir(
 			</p>
 			<h4>Shell Script (compr.sh)</h4>
 			<output>sh compr.sh</output>
-			<pre>
-				<code>
-g++ -o /home/kyle/Documents/c++-projects/boostprog /home/kyle/Documents/c++-projects/boosteg.cpp -lboost_filesystem -lboost_system;
-/home/kyle/Documents/c++-projects/boostprog
-				</code>
-			</pre>
+			<div class="code">
+				<pre class="prettyprint linenums">
+					<code>
+	g++ -o /home/kyle/Documents/c++-projects/boostprog /home/kyle/Documents/c++-projects/boosteg.cpp -lboost_filesystem -lboost_system;
+	/home/kyle/Documents/c++-projects/boostprog
+					</code>
+				</pre>
+			</div>
 		</section>
 		<section id="downloads">
 			<h3>Downloads</h3>
