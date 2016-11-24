@@ -106,6 +106,21 @@ li > a {
 	width:90%;
 }
 
+h3 {
+	background-size: contain;
+	padding-top: 8px;
+	padding-left: 60px;
+	height: 30px;
+}
+
+#interests > h3{
+	background: url("images/headphone.svg") 20px top no-repeat;
+}
+
+#timetable > h3{
+	
+}
+
 li > a:hover {
 	animation-name: a-hover;
 	animation-duration: 0.5s;
