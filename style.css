@@ -1,3 +1,9 @@
+/**
+ ** TODO : create and add icons for headings, downloads and bottom navigation
+ **	TODO : check across multiple browsers
+ **	TODO : validate html, css and accessibility
+ **/
+
 @font-face {
 	font-family: 'Quicksand';
 	src: url('fonts/Quicksand_Book.otf');
@@ -121,7 +127,7 @@ a:hover {
 }
 
 section{
-	background-image: url("images/box3.svg");
+	background-image: url("images/box_sect.svg");
 	background-size: 100% 100%;
 	padding-left: 3.5%;
 	padding-top:1.5%;
@@ -145,12 +151,10 @@ h3{
 }
 img {
 	margin: 1%;
-	/*border: 7px solid #ffe3f6;
-	border-radius: 12px;*/
 	max-width: 100%;
 	height: auto;
 	border: 10px solid transparent;
-	border-image: url("images/box4.svg") 10 stretch;
+	border-image: url("images/box_img.svg") 60 stretch;
 }
 dd{
 	display:none;
@@ -253,7 +257,7 @@ div.code{
 	margin-bottom:10px;
 	width: 90%;
 	border: 10px solid transparent;
-	border-image: url("images/box4.svg") 10 stretch;
+	border-image: url("images/box_code.svg") 60 stretch;
 }
 
 /* Specify class=linenums on a pre to get line numbering */
