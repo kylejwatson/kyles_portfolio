@@ -121,7 +121,7 @@ a:hover {
 }
 
 section{
-	background-image: url("images/box.svg");
+	background-image: url("images/box3.svg");
 	background-size: 100% 100%;
 	padding-left: 3.5%;
 	padding-top:1.5%;
@@ -150,7 +150,7 @@ img {
 	max-width: 100%;
 	height: auto;
 	border: 10px solid transparent;
-	border-image: url("images/box2.svg") 10 stretch;
+	border-image: url("images/box4.svg") 10 stretch;
 }
 dd{
 	display:none;
@@ -253,7 +253,7 @@ div.code{
 	margin-bottom:10px;
 	width: 90%;
 	border: 10px solid transparent;
-	border-image: url("images/box2.svg") 10 stretch;
+	border-image: url("images/box4.svg") 10 stretch;
 }
 
 /* Specify class=linenums on a pre to get line numbering */
