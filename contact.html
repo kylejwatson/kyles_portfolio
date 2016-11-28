@@ -4,6 +4,9 @@
 	<title> Kyle Watson's Portfolio - Contact</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<!--Font Awesome by Dave Gandy - http://fontawesome.io-->
+	<!-- <i> tags used for glyphicons (styling) so technically incorrect use of HTML but hidden from accessibility with "aria-hidden=true" attribute-->
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
@@ -33,22 +36,28 @@
 			<em>You can still find me at The University of Salford during the contact hours listed on my timetable and you can email
 			me on my university email listed at the bottom of every page.</em>
 		</p>
-		<h3>Contact Form</h3>
-		<form action="#" enctype="text/plain" method="post">
-			<label for="Name">Name: </label><input name="Name" type="text" id="Name">
-			<label for="E-mail">E-mail address: </label><input name="E-mail" type="text" id="E-mail">
-			<label for="Comment">Comment: </label>
-			<textarea name="Comment" id="Comment"></textarea>
-			<input type="submit" name="Submit" id="Submit" value="Submit">
-		</form>
-		<h3>GitHub</h3>
-		<p>
-			<a href="#">www.github.com/kylewatson98</a>
-		</p>
-		<h3>LinkedIn</h3>
-		<p>
-			<a href="#">www.linkedin.com/realprofilegoeshere</a>
-		</p>
+		<section id="contact-form">
+			<h3><i class="fa fa-envelope" aria-hidden="true"></i> Contact Form</h3>
+			<form action="#" enctype="text/plain" method="post">
+				<label for="Name">Name: </label><input name="Name" type="text" id="Name">
+				<label for="E-mail">E-mail address: </label><input name="E-mail" type="text" id="E-mail">
+				<label for="Comment">Comment: </label>
+				<textarea name="Comment" id="Comment"></textarea>
+				<input type="submit" name="submit" id="submit" value="Submit">
+			</form>
+		</section>
+		<section id="github">
+			<h3><i class="fa fa-github" aria-hidden="true"></i> GitHub</h3>
+			<p>
+				<a href="#">www.github.com/kylewatson98</a>
+			</p>
+		</section>
+		<section id="linkedin">
+			<h3><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</h3>
+			<p>
+				<a href="#">www.linkedin.com/realprofilegoeshere</a>
+			</p>
+		</section>
 	</main>
 	<!-- Content ends here -->
 	<footer id="contact">
