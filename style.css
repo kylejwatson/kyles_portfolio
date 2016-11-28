@@ -8,6 +8,10 @@
 	font-family: 'Quicksand';
 	src: url('fonts/Quicksand_Book.otf');
 }
+@font-face {
+	font-family: 'Quicksand-bold';
+	src: url('fonts/Quicksand_Bold.otf');
+}
 
 * {
 	box-sizing: border-box;
@@ -28,18 +32,22 @@ body {
 	color: white;
 }
 
-[class*="col-1"] {width: 8.33%;}
-[class*="col-2"] {width: 16.66%;}
-[class*="col-3"] {width: 25%;}
-[class*="col-4"] {width: 33.33%;}
-[class*="col-5"] {width: 41.66%;}
-[class*="col-6"] {width: 50%;}
-[class*="col-7"] {width: 58.33%;}
-[class*="col-8"] {width: 66.66%;}
-[class*="col-9"] {width: 75%;}
-[class*="col-10"] {width: 83.33%;}
-[class*="col-11"] {width: 91.66%;}
-[class*="col-12"] {width: 100%;}
+h1,h2,h3{
+	font-family: Quicksand-bold, Arial, Helvetica, sans-serif;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
 
 footer > * , footer > * > *{
 	display:inline;
@@ -112,10 +120,6 @@ h3 {
 	padding-top: 8px;
 	padding-left: 60px;
 	height: 30px;
-}
-
-#interests > h3{
-	/*background: url("images/headphone.svg") 20px top no-repeat;*/
 }
 
 li > a:hover {
@@ -195,7 +199,7 @@ textarea{
 }
 
 input,textarea{
-	/*background-color: #97c4da;*/
+	font-family: Quicksand, Arial, Helvetica, sans-serif;
 	background-color: rgba(0,0,0,0);
 	color:white;
 	background-image: url("images/box_code.svg");
@@ -214,6 +218,7 @@ input,textarea{
 	width:100px;
 	height:40px;
 	font-size:1em;
+	font-family: Quicksand-bold, Arial, Helvetica, sans-serif;
 }
 
 #submit:hover{
