@@ -85,7 +85,6 @@ h1 {
 }
 
 #navigation > ul > li {
-	list-style-type: none;
 	text-align: center;
 	padding: 0;
 }
@@ -101,7 +100,10 @@ ul{
 
 .title-nested:hover .nested-list > li{
 	display: list-item;
-	list-style-type: decimal-leading-zero;
+}
+
+li{
+	list-style-type: none;
 }
 
 @-o-keyframes a-hover{
