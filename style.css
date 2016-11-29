@@ -155,8 +155,20 @@ section{
 	padding-bottom:0.5%;
 	margin-bottom:10px;
 }
-table, td {
+table{
+	background-image: url("images/box_code.svg");
+	background-size: 100% 100%;
+	padding: 25px;
+	margin-left:0px;
+}
+td {
 	border: 1px solid #000000;
+}
+td, th{
+	font-size: 0.8em;
+}
+table > caption{
+	margin-bottom: 15px;
 }
 aside {
 	width: 250px;
