@@ -39,10 +39,10 @@
 		<section id="contact-form">
 			<h3><span class="fa fa-envelope" aria-hidden="true"></span>  Contact Form</h3>
 			<form action="#" enctype="text/plain" method="post">
-				<label for="Name">Name: </label><input name="Name" type="text" id="Name">
-				<label for="E-mail">E-mail address: </label><input name="E-mail" type="text" id="E-mail">
+				<label for="Name">Name: </label><input name="Name" type="text" id="Name" maxlength="256">
+				<label for="E-mail">E-mail address: </label><input name="E-mail" type="text" id="E-mail" maxlength="256">
 				<label for="Comment">Comment: </label>
-				<textarea name="Comment" id="Comment"></textarea>
+				<textarea name="Comment" id="Comment" maxlength="65536"></textarea>
 				<input type="submit" name="submit" id="submit" value="Submit">
 			</form>
 		</section>
