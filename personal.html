@@ -1,3 +1,4 @@
+<!--TODO finish accessibility checks -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,73 +76,74 @@
 				<a href="table-popup.html" target="_blank" title="opens new window">View Timetable</a>
 			</p>
 			<table class="primary" title="Timetable">
+				<caption> University Contact Hours </caption>
 				<thead>
 					<tr>
-						<th> Days </th>
-						<th> 9:00-9:50 </th>
-						<th> 10:00-10:50</th>
-						<th> 11:00-11:50</th>
-						<th> 12:00-12:50</th>
-						<th> 13:00-13:50</th>
-						<th> 14:00-14:50</th>
-						<th> 15:00-15:50</th>
-						<th> 16:00-16:50</th>
+						<th id="days"> Days </th>
+						<th id="nine"> 9:00-9:50 </th>
+						<th id="ten"> 10:00-10:50</th>
+						<th id="eleven"> 11:00-11:50</th>
+						<th id="twelve"> 12:00-12:50</th>
+						<th id="one"> 13:00-13:50</th>
+						<th id="two"> 14:00-14:50</th>
+						<th id="three"> 15:00-15:50</th>
+						<th id="four"> 16:00-16:50</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th> Monday </th>
-						<td></td>
-						<td></td>
-						<td>DBS Lecture with CBryant in Chapman3 </td>
-						<td>PD+P Lecture with AYoung in Chapman3 </td>
-						<td>DBS Lecture with CBryant in Chapman3 </td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<th id="mon" headers="days"> Monday </th>
+						<td headers="mon nine"></td>
+						<td headers="mon ten"></td>
+						<td headers="mon eleven">DBS Lecture with CBryant in Chapman3 </td>
+						<td headers="mon twelve">PD+P Lecture with AYoung in Chapman3 </td>
+						<td headers="mon one">DBS Lecture with CBryant in Chapman3 </td>
+						<td headers="mon two"></td>
+						<td headers="mon three"></td>
+						<td headers="mon four"></td>
 					</tr>
 					<tr>
-						<th> Tuesday</th>
-						<td></td>
-						<td></td>
-						<td>Programming Workshop with AAkinbi and DNewton in Newton140</td>
-						<td></td>
-						<td>Programming Lecture with DNewton in Chapman6</td>
-						<td></td>
-						<td>CSI-Linux Workshop with NMurray in Newton242</td>
-						<td></td>
+						<th id="tue" headers="days"> Tuesday</th>
+						<td headers="tue nine"></td>
+						<td headers="tue ten"></td>
+						<td headers="tue eleven">Programming Workshop with AAkinbi and DNewton in Newton140</td>
+						<td headers="tue twelve"></td>
+						<td headers="tue one">Programming Lecture with DNewton in Chapman6</td>
+						<td headers="tue two"></td>
+						<td headers="tue three">CSI-Linux Workshop with NMurray in Newton242</td>
+						<td headers="tue four"></td>
 					</tr>
 					<tr>
-						<th>Wednesday</th>
-						<td></td>
-						<td>PD+P Lecture with AYoung in Chapman3</td>
-						<td>Programming Lecture with DNewton in Newton140</td>
-						<td>CSI-Linux Lecture with NMurray in Chapman5</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<th id="wed" headers="days">Wednesday</th>
+						<td headers="wed nine"></td>
+						<td headers="wed ten">PD+P Lecture with AYoung in Chapman3</td>
+						<td headers="wed eleven">Programming Lecture with DNewton in Newton140</td>
+						<td headers="wed twelve">CSI-Linux Lecture with NMurray in Chapman5</td>
+						<td headers="wed one"></td>
+						<td headers="wed two"></td>
+						<td headers="wed three"></td>
+						<td headers="wed four"></td>
 					</tr>
 					<tr>
-						<th>Thursday</th>
-						<td>Programming Workshop with AAkinbi and DNewton in Newton140</td>
-						<td></td>
-						<td colspan="2">WebDevHCI Lecture with CHughes in Chapman2</td>
-						<td>DBS Workshop/Lecture with AAkinbi and CBryant in Newton140</td>
-						<td>WebDevHCI Workshop with CHughes in Newton141</td>
-						<td></td>
-						<td>CSI-Linux Tutorial with NMurray in Newton236-237</td>
+						<th id="thu" headers="days">Thursday</th>
+						<td headers="thu nine">Programming Workshop with AAkinbi and DNewton in Newton140</td>
+						<td headers="thu ten"></td>
+						<td headers="thu eleven twelve" colspan="2">WebDevHCI Lecture with CHughes in Chapman2</td>
+						<td headers="thu one">DBS Workshop/Lecture with AAkinbi and CBryant in Newton140</td>
+						<td headers="thu two">WebDevHCI Workshop with CHughes in Newton141</td>
+						<td headers="thu three"></td>
+						<td headers="thu four">CSI-Linux Tutorial with NMurray in Newton236-237</td>
 					</tr>
 					<tr>
-						<th><abbr title="Thank God It's Friday">TGIF!</abbr></th>
-						<td></td>
-						<td></td>
-						<td>PD+P Tutorial with AYoung in Peel337</td>
-						<td>WebDevHCI Workshop with CHughes in Newton141</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<th id="fri" headers="days"><abbr title="Thank God It's Friday">TGIF!</abbr></th>
+						<td headers="fri nine"></td>
+						<td headers="fri ten"></td>
+						<td headers="fri eleven">PD+P Tutorial with AYoung in Peel337</td>
+						<td headers="fri twelve">WebDevHCI Workshop with CHughes in Newton141</td>
+						<td headers="fri one"></td>
+						<td headers="fri two"></td>
+						<td headers="fri three"></td>
+						<td headers="fri four"></td>
 					</tr>
 				</tbody>
 				<tfoot>
