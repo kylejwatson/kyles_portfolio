@@ -27,7 +27,12 @@ body {
 	/*text-transform: lowercase;*/
 }
 
-*::selection {
+::-moz-selection {
+	background-color: #ea316e;
+	color: white;
+}
+
+::selection {
 	background-color: #ea316e;
 	color: white;
 }
@@ -222,7 +227,7 @@ input,textarea{
 }
 
 #submit:hover{
-	cursor:pointer; cursor: hand;
+	cursor:pointer;
 	color:#ea316e;
 }
 
