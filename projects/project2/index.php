@@ -16,16 +16,16 @@
 		<nav id="navigation">
 			<h2> Navigation </h2>
 			<ul class="row">
-				<li class="col-3"><a href="../../index.html"><span class="fa fa-home" aria-hidden="true"></span> Home </a></li>
-				<li class="col-3"><a href="../../personal.html"><span class="fa fa-user" aria-hidden="true"></span> Personal Bio </a></li>
+				<li class="col-3"><a href="../../index.php"><span class="fa fa-home" aria-hidden="true"></span> Home </a></li>
+				<li class="col-3"><a href="../../personal.php"><span class="fa fa-user" aria-hidden="true"></span> Personal Bio </a></li>
 				<li class="title-nested col-3"><a><span class="fa fa-code" aria-hidden="true"></span> Projects </a>
 					<ul class="nested-list">
 						<li><a href="../project1/"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
-						<li><a href="index.html"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
+						<li><a href="index.php"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
 						<li><a> More Coming Soon! </a></li>
 					</ul>
 				</li>
-				<li class="col-3"><a href="../../contact.html"><span class="fa fa-address-book" aria-hidden="true"></span> Contact me </a></li>
+				<li class="col-3"><a href="../../contact.php"><span class="fa fa-address-book" aria-hidden="true"></span> Contact me </a></li>
 			</ul>
 		</nav>
 	</header>
@@ -221,7 +221,11 @@
 		<address>
 			Created by some <a href="mailto:k.j.watson1@edu.salford.ac.uk">guy.</a>
 		</address>
-		<p>Last Modified: 07/11/16 14:28</p>
+		<p>
+			<?php
+				echo "Last Modified: " . date("d/m/y H:m",filemtime(__FILE__));
+			?>
+		</p>
 		<nav id="bottom-nav">
 			<ul>
 				<li><a href="#">Back to the top.</a></li>
