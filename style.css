@@ -1,6 +1,5 @@
 /**
  ** TODO : add glyphicons to bottom nav buttons
- ** TODO : add php to make accurate last modified text
  **	TODO : check across multiple browsers
  **/
 
@@ -29,12 +28,12 @@ body {
 
 ::-moz-selection {
 	background-color: #ea316e;
-	color: white;
+	color: #ffffff;
 }
 
 ::selection {
 	background-color: #ea316e;
-	color: white;
+	color: #ffffff;
 }
 
 h1,h2,h3{
@@ -107,26 +106,26 @@ li{
 }
 
 @-o-keyframes a-hover{
-	0% {background-color:#B1E3FA;}
+	0% {background-color:#b1e3fa;}
 	100% {background-color: #97c4da;}
 }
 @-moz-keyframes a-hover{
-	0% {background-color:#B1E3FA;}
+	0% {background-color:#b1e3fa;}
 	100% {background-color: #97c4da;}
 }
 @-webkit-keyframes a-hover{
-	0% {background-color:#B1E3FA;}
+	0% {background-color:#b1e3fa;}
 	100% {background-color: #97c4da;}
 }
 @keyframes a-hover{
-	0% {background-color:#B1E3FA;}
+	0% {background-color:#b1e3fa;}
 	100% {background-color: #97c4da;}
 }
 
 li > a {
 	display:block;
 	padding:5px;
-	background-color: #B1E3FA;
+	background-color: #b1e3fa;
 }
 
 #downloads > ul > li > a{
@@ -221,7 +220,7 @@ em {
 	text-decoration: underline;
 }
 strong {
-	color: red;
+	color: #ff0000;
 	text-decoration: underline;
 }
 label{
@@ -238,7 +237,7 @@ textarea{
 input,textarea{
 	font-family: Quicksand, Arial, Helvetica, sans-serif;
 	background-color: rgba(0,0,0,0);
-	color:white;
+	color: #ffffff;
 	background-image: url("images/box_code.svg");
 	background-size: 100% 100%;
 	padding-left:10px;
@@ -340,5 +339,5 @@ div.code{
 }
 
 /* Specify class=linenums on a pre to get line numbering */
-ol.linenums { margin-top: 0; margin-bottom: 0; color: white } /* IE indents via margin-left */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #ffffff } /* IE indents via margin-left */
 li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8, li.L9 {background-color: #97c4da !important; list-style-type: decimal !important }
