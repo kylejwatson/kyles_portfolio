@@ -30,7 +30,7 @@
 			<ul class="row">
 				<li class="col-3"><a href="index.php"><span class="fa fa-home" aria-hidden="true"></span> Home </a></li>
 				<li class="col-3"><a href="personal.php"><span class="fa fa-user" aria-hidden="true"></span> Personal Bio </a></li>
-				<li class="title-nested col-3"><a><span class="fa fa-code" aria-hidden="true"></span> Projects </a>
+				<li class="title-nested col-3"><a href="projects/"><span class="fa fa-code" aria-hidden="true"></span> Projects </a>
 					<ul class="nested-list">
 						<li><a href="projects/project1/"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
 						<li><a href="projects/project2/"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>

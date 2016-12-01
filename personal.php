@@ -1,4 +1,3 @@
-<!--TODO finish accessibility checks -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +17,7 @@
 			<ul class="row">
 				<li class="col-3"><a href="index.php"><span class="fa fa-home" aria-hidden="true"></span> Home </a></li>
 				<li class="col-3"><a href="personal.php"><span class="fa fa-user" aria-hidden="true"></span> Personal Bio </a></li>
-				<li class="title-nested col-3"><a><span class="fa fa-code" aria-hidden="true"></span> Projects </a>
+				<li class="title-nested col-3"><a href="projects/"><span class="fa fa-code" aria-hidden="true"></span> Projects </a>
 					<ul class="nested-list">
 						<li><a href="projects/project1/"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
 						<li><a href="projects/project2/"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
@@ -73,7 +72,7 @@
 				<dd>Computer System Internals and Linux is a module split into learning about the fundamentals of computers such as there hardware and binary manipulation, as well as a section on learning how to use the <abbr title="Command Line Interface">CLI</abbr> of Linux Distros correctly and efficiently.</dd>
 			</dl>
 			<p id="table-popup">
-				<a href="table-popup.html" target="_blank" title="opens new window">View Timetable</a>
+				<a href="table-popup.php" target="_blank" title="opens new window">View Timetable</a>
 			</p>
 			<table class="primary" title="Timetable">
 				<caption> University Contact Hours </caption>
@@ -175,7 +174,7 @@
 		</p>
 		<nav id="bottom-nav">
 			<p>
-				<a href="#">Back to the top.</a>
+				<a href="#"><span class="fa fa-arrow-circle-up" aria-hidden="true"></span> Back to the top.</a>
 			</p>
 		</nav>
 	</footer>
