@@ -8,9 +8,6 @@
 	<meta name="author" content="Kyle Watson">
 	<link rel="stylesheet" type="text/css" href="../../style.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!--Font Awesome by Dave Gandy - http://fontawesome.io-->
-	<!-- <i> tags used for glyphicons (styling) so technically incorrect use of HTML but hidden from accessibility with "aria-hidden=true" attribute-->
-	<link rel="stylesheet" type="text/css" href="../../font-awesome-4.7.0/css/font-awesome.min.css" />
 	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </head>
 <body>
@@ -19,16 +16,16 @@
 		<nav id="navigation">
 			<h2> Navigation </h2>
 			<ul class="row">
-				<li class="col-3"><a href="../../index.php"><span class="fa fa-home" aria-hidden="true"></span> Home </a></li>
-				<li class="col-3"><a href="../../personal.php"><span class="fa fa-user" aria-hidden="true"></span> Personal Bio </a></li>
-				<li class="title-nested col-3"><a href="../index.php"><span class="fa fa-code" aria-hidden="true"></span> Projects </a>
+				<li class="col-3"><a href="../../index.php"> Home </a></li>
+				<li class="col-3"><a href="../../personal.html"> Personal Bio </a></li>
+				<li class="title-nested col-3"><a href="../../index.html"> Projects </a>
 					<ul class="nested-list">
-						<li><a href="index.php"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
+						<li><a href="../index.html"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
 						<li><a href="../project2/"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
 						<li><a> More Coming Soon! </a></li>
 					</ul>
 				</li>
-				<li class="col-3"><a href="../../contact.php"><span class="fa fa-address-book" aria-hidden="true"></span> Contact me </a></li>
+				<li class="col-3"><a href="../../contact.html"> Contact me </a></li>
 			</ul>
 		</nav>
 	</header>
@@ -49,7 +46,7 @@
 			</ul>
 		</aside>
 		<section id="source">
-			<h3><span class="fa fa-code" aria-hidden="true"></span> Source Code </h3>
+			<h3> Source Code </h3>
 			<p class="details">
 				This code is a <em>work in progress</em> and many features will be added as well as errors to be expected.
 			</p>
@@ -247,7 +244,7 @@
 			</div>
 		</section>
 		<section id="use">
-			<h3><span class="fa fa-terminal" aria-hidden="true"></span> Usage and Compile Script </h3>
+			<h3> Usage and Compile Script </h3>
 			<p>
 				To use the program just plug in the backup devices and launch it.
 				I made a simple shell script to compile and run the program for testing purposes.
@@ -267,7 +264,7 @@
 			</div>
 		</section>
 		<section id="downloads">
-			<h3><span class="fa fa-download" aria-hidden="true"></span> Downloads</h3>
+			<h3> Downloads</h3>
 			<ul>
 				<li><a href="downloads/boosteg.cpp" target="_blank" title="opens new window">Source Code (boosteg.cpp)</a></li>
 				<li><a href="downloads/boostprog" target="_blank" title="opens new window">Compiled Program [Ubuntu x64] (boostprog)</a></li>
@@ -276,7 +273,7 @@
 			</ul>
 		</section>
 		<section id="description">
-			<h3><span class="fa fa-info-circle" aria-hidden="true"></span> Description </h3>
+			<h3> Description </h3>
 			<p>
 				This application is written in C++ and eventually once finished it will be cross platform. The source should be
 				compilable on any platform which was my incentive for choosing the <a href="http://www.boost.org/" target="_blank" title="opens new window">
@@ -311,9 +308,7 @@
 			Created by some <a href="mailto:k.j.watson1@edu.salford.ac.uk">guy.</a>
 		</address>
 		<p>
-			<?php
-				echo "Last Modified: " . date("d/m/y H:m",filemtime(__FILE__));
-			?>
+			Last Modified: 12:25 02/12/16
 		</p>
 		<nav id="bottom-nav">
 			<ul>
