@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 	<title> Kyle Watson's Portfolio - Projects </title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Portfolio, Student, Developer">
+	<meta name="description" content="A simple portfolio to show off projects and attributes.">
+	<meta name="author" content="Kyle Watson">
 	<link rel="stylesheet" type="text/css" href="../style.css" />
 	<!--Font Awesome by Dave Gandy - http://fontawesome.io-->
 	<!-- <i> tags used for glyphicons (styling) so technically incorrect use of HTML but hidden from accessibility with "aria-hidden=true" attribute-->

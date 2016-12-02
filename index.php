@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 	<title> Kyle Watson's Portfolio - Home</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Portfolio, Student, Developer">
+	<meta name="description" content="A simple portfolio to show off projects and attributes.">
+	<meta name="author" content="Kyle Watson">
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!--http://realfavicongenerator.net/ favicons -->
