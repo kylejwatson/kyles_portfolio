@@ -1,5 +1,4 @@
 /**
- ** TODO : add glyphicons to bottom nav buttons
  **	TODO : check across multiple browsers
  **/
 
@@ -23,7 +22,6 @@ body {
 	color: #383f4a;
 	width:100%;
 	margin: 0;
-	/*text-transform: lowercase;*/
 }
 
 ::-moz-selection {
@@ -290,12 +288,12 @@ div.code{
 	border-image: url("images/box_code.svg") 60 stretch;
 }
 
-/* Specify class=linenums on a pre to get line numbering */
+
 ol.linenums {
 	margin-top: 0;
 	margin-bottom: 0;
 	color: #ffffff
-} /* IE indents via margin-left */
+}
 li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8, li.L9 {
 	background-color: #97c4da !important;
 	list-style-type: decimal !important;
@@ -341,7 +339,6 @@ li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8, li.L9 {
 	}
 }
 
-
 @media only screen and (max-width: 768px) {
 	[class*="col-"] {
 		width: 100%;
@@ -351,3 +348,4 @@ li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8, li.L9 {
 		display: block;
 	}
 }
+
