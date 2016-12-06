@@ -26,9 +26,8 @@ $(document).ready(function(){
     });
     $(window).scroll(function() {
        $("aside ul li a").each(function() {
-            if ($(document).scrollTop + $(window).height()/2 < $(this.hash).offset().top) {
+            if ($(document).scrollTop() + $(window).height()/2 < $(this.hash).offset().top) {
                $(this).children("span").addClass("fa-arrow-circle-down").removeClass("fa-arrow-circle-up");
-                $()
             } else {
                 $(this).children("span").addClass("fa-arrow-circle-up").removeClass("fa-arrow-circle-down");
             }
