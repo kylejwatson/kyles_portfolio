@@ -231,8 +231,8 @@
 		</p>
 		<nav id="bottom-nav">
 			<ul>
-				<li><a href="#">Back to the top.</a></li>
-				<li id="back-button"><a href="../project1/">Previous project.</a></li>
+				<li><a href="#"><span class="fa fa-arrow-circle-up" aria-hidden="true"></span> Back to the top.</a></li>
+				<li id="back-button"><a href="../project1/"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous project.</a></li>
 			</ul>
 		</nav>
 	</footer>

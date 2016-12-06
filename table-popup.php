@@ -24,7 +24,7 @@
                     <ul class="nested-list">
                         <li><a href="projects/project1/"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
                         <li><a href="projects/project2/"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
-                        <li><a> More Coming Soon! </a></li>
+                        <li><a> More Coming oon! </a></li>
                     </ul>
                 </li>
                 <li class="col-3"><a href="contact.php"><span class="fa fa-address-book" aria-hidden="true"></span> Contact me </a></li>
@@ -139,7 +139,7 @@
         </p>
 		<nav id="bottom-nav">
 			<p>
-				<a href="#">Back to the top.</a>
+				<a href="#"><span class="fa fa-arrow-circle-up" aria-hidden="true"></span> Back to the top.</a>
 			</p>
 		</nav>
 	</footer>

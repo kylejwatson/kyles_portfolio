@@ -74,7 +74,7 @@
 		</p>
 		<nav id="bottom-nav">
 			<p>
-				<a href="#">Back to the top.</a>
+				<a href="#"><span class="fa fa-arrow-circle-up" aria-hidden="true"></span> Back to the top.</a>
 			</p>
 		</nav>
 	</footer>

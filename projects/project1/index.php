@@ -317,8 +317,8 @@
 		</p>
 		<nav id="bottom-nav">
 			<ul>
-				<li><a href="#">Back to the top.</a></li>
-				<li id="next-button"><a href="../project2/">Next project.</a></li>
+				<li><a href="#"><span class="fa fa-arrow-circle-up" aria-hidden="true"></span> Back to the top.</a></li>
+				<li id="next-button"><a href="../project2/"><span class="fa fa-arrow-circle-right" aria-hidden="true"></span> Next project.</a></li>
 			</ul>
 		</nav>
 	</footer>
