@@ -32,7 +32,7 @@
         </nav>
     </header>
 	<!-- Content starts here -->
-	<main>
+	<main id="section">
 		<h3> Timetable</h3>
 		<p>
 			There are many modules in my uni course, here is a list of there descriptions as well as my contact hours.

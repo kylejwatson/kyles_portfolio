@@ -1,6 +1,5 @@
 /**
- ** TODO : add glyphicons to bottom nav buttons
- **	TODO : check across multiple browsers
+ ** TODO : add glyphicons to bottom and side nav buttons
  **/
 
 @font-face {
@@ -23,7 +22,6 @@ body {
 	color: #383f4a;
 	width:100%;
 	margin: 0;
-	/*text-transform: lowercase;*/
 }
 
 ::-moz-selection {
@@ -167,7 +165,7 @@ a:hover {
 	color:#ea316e;
 }
 
-section{
+section, main#section{
 	background-image: url("images/box_sect.svg");
 	background-size: 100% 100%;
 	padding-left: 3.5%;
@@ -272,7 +270,6 @@ footer{
 	display:none;
 }
 
-
 pre.prettyprint {
 	display: block;
 	background-color: #97c4da;
@@ -290,12 +287,12 @@ div.code{
 	border-image: url("images/box_code.svg") 60 stretch;
 }
 
-/* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
 	margin-top: 0;
 	margin-bottom: 0;
 	color: #ffffff
-} /* IE indents via margin-left */
+}
+
 li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8, li.L9 {
 	background-color: #97c4da !important;
 	list-style-type: decimal !important;
@@ -340,7 +337,6 @@ li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8, li.L9 {
 		margin-bottom:80px;
 	}
 }
-
 
 @media only screen and (max-width: 768px) {
 	[class*="col-"] {
