@@ -35,9 +35,8 @@
 				<li class="col-3"><a href="personal.php"><span class="fa fa-user" aria-hidden="true"></span> Personal Bio </a></li>
 				<li class="title-nested col-3"><a href="projects/"><span class="fa fa-code" aria-hidden="true"></span> Projects </a>
 					<ul class="nested-list">
-						<li><a href="projects/project1/"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
-						<li><a href="projects/project2/"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
-						<li><a> More Coming Soon! </a></li>
+                        <li><a href="https://github.com/kylewatson98/fym-timetable"><abbr title="First Year Matters">FYM</abbr> Timetable</a></li>
+                        <li><a href="https://github.com/kylewatson98/BackDefense">BackDefense</a></li>
 					</ul>
 				</li>
 				<li class="col-3"><a href="contact.php"><span class="fa fa-address-book" aria-hidden="true"></span> Contact me </a></li>

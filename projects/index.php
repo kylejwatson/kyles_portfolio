@@ -22,9 +22,8 @@
 				<li class="col-3"><a href="../personal.php"><span class="fa fa-user" aria-hidden="true"></span> Personal Bio </a></li>
 				<li class="title-nested col-3"><a href="index.php"><span class="fa fa-code" aria-hidden="true"></span> Projects </a>
 					<ul class="nested-list">
-						<li><a href="project1/"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
-						<li><a href="project2/"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
-						<li><a> More Coming Soon! </a></li>
+						<li><a href="https://github.com/kylewatson98/fym-timetable"><abbr title="First Year Matters">FYM</abbr> Timetable</a></li>
+						<li><a href="https://github.com/kylewatson98/BackDefense">BackDefense</a></li>
 					</ul>
 				</li>
 				<li class="col-3"><a href="../contact.php"><span class="fa fa-address-book" aria-hidden="true"></span> Contact me </a></li>
@@ -34,17 +33,16 @@
 	<main id="bio" tabindex="-1">
 		<!-- Content starts here -->
 		<section id="proj1">
-			<h3><a href="project1/"><abbr title="Universal Serial Bus">USB</abbr> Backup (C++)</a></h3>
+			<h3><a href="https://github.com/kylewatson98/fym-timetable"><abbr title="First Year Matters">FYM</abbr> Timetable</a></h3>
 			<p>
-				This page showcases a project I am currently working on in order to learn
-				more about C++ and it will also have practical uses. It is currently only
-				in pre-alpha.
+                A simple timetabling app to make it easier for University of Salford
+                computing students to read the timetable hosted on http://firstyearmatters.info/new/timetables.html
 			</p>
 		</section>
 		<section id="proj2">
-			<h3><a href="project2"><abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix (C#)</a></h3>
+			<h3><a href="https://github.com/kylewatson98/BackDefense">BackDefense</a></h3>
 			<p>
-				This page showcases a windows service I developed to solve an annoying problem and learn the simplicity of C#.
+                Unity Tower-Defense game; but you have to fight against your own creation.
 			</p>
 		</section>
 		<!-- Content ends here -->

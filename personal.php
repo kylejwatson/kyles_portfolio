@@ -24,9 +24,8 @@
 				<li class="col-3"><a href="personal.php"><span class="fa fa-user" aria-hidden="true"></span> Personal Bio </a></li>
 				<li class="title-nested col-3"><a href="projects/"><span class="fa fa-code" aria-hidden="true"></span> Projects </a>
 					<ul class="nested-list">
-						<li><a href="projects/project1/"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
-						<li><a href="projects/project2/"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
-						<li><a> More Coming Soon! </a></li>
+                        <li><a href="https://github.com/kylewatson98/fym-timetable"><abbr title="First Year Matters">FYM</abbr> Timetable</a></li>
+                        <li><a href="https://github.com/kylewatson98/BackDefense">BackDefense</a></li>
 					</ul>
 				</li>
 				<li class="col-3"><a href="contact.php"><span class="fa fa-address-book" aria-hidden="true"></span> Contact me </a></li>
@@ -62,7 +61,7 @@
 		<section id="timetable">
 			<h3><span class="fa fa-calendar" aria-hidden="true"></span> Timetable</h3>
 			<p>
-				There are many modules in my uni course, here is a list of there descriptions as well as my contact hours.
+				There are many modules in my uni course, here is a list of there descriptions.
 			</p>
 			<dl>
 				<dt>PD+P</dt>
@@ -76,7 +75,7 @@
 				<dt>CSI-Linux</dt>
 				<dd>Computer System Internals and Linux is a module split into learning about the fundamentals of computers such as there hardware and binary manipulation, as well as a section on learning how to use the <abbr title="Command Line Interface">CLI</abbr> of Linux Distros correctly and efficiently.</dd>
 			</dl>
-			<p id="table-popup">
+			<!--<p id="table-popup">
 				<a href="table-popup.php" target="_blank" title="opens new window">View Timetable</a>
 			</p>
 			<table class="primary" title="Timetable">
@@ -155,7 +154,7 @@
 						<th id="mirror" colspan="9"> This timetable was last mirrored on Friday 14th October 2016 </th>
 					</tr>
 				</tfoot>
-			</table>
+			</table>-->
 		</section>
 		<section id="photo">
 			<h3><span class="fa fa-photo" aria-hidden="true"></span> Handsome Photo </h3>

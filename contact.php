@@ -22,9 +22,8 @@
 				<li class="col-3"><a href="personal.php"><span class="fa fa-user" aria-hidden="true"></span>  Personal Bio </a></li>
 				<li class="title-nested col-3"><a href="projects/"><span class="fa fa-code" aria-hidden="true"></span>  Projects </a>
 					<ul class="nested-list">
-						<li><a href="projects/project1/"> <abbr title="Universal Serial Bus">USB</abbr> Backup </a></li>
-						<li><a href="projects/project2/"> <abbr title="Grand Theft Auto">GTA</abbr> Graphics Fix </a></li>
-						<li><a> More Coming Soon! </a></li>
+                        <li><a href="https://github.com/kylewatson98/fym-timetable"><abbr title="First Year Matters">FYM</abbr> Timetable</a></li>
+                        <li><a href="https://github.com/kylewatson98/BackDefense">BackDefense</a></li>
 					</ul>
 				</li>
 				<li class="col-3"><a href="contact.php"><span class="fa fa-address-book" aria-hidden="true"></span>  Contact me </a></li>
@@ -34,12 +33,7 @@
 	<!-- Content starts here -->
 	<main id="contact-me" tabindex="-1">
 		<h2> Contact Me </h2>
-		<p>
-			<strong> The contact form is not yet working. I will also be adding an actual LinkedIn account. </strong>
-			<em>You can still find me at The University of Salford during the contact hours listed on my timetable and you can email
-			me on my university email listed at the bottom of every page.</em>
-		</p>
-		<section id="contact-form">
+		<!--<section id="contact-form">
 			<h3><span class="fa fa-envelope" aria-hidden="true"></span>  Contact Form</h3>
 			<form action="#" enctype="text/plain" method="post">
 				<label for="Name">Name: </label><input name="Name" type="text" id="Name" maxlength="256">
@@ -48,17 +42,17 @@
 				<textarea name="Comment" id="Comment" maxlength="65536"></textarea>
 				<input type="submit" name="submit" id="submit" value="Submit">
 			</form>
-		</section>
+		</section>-->
 		<section id="github">
 			<h3><span class="fa fa-github" aria-hidden="true"></span>  GitHub</h3>
 			<p>
-				<a href="#">www.github.com/kylewatson98</a>
+				<a href="https://www.github.com/kylewatson98">www.github.com/kylewatson98</a>
 			</p>
 		</section>
 		<section id="linkedin">
 			<h3><span class="fa fa-linkedin-square" aria-hidden="true"></span>  LinkedIn</h3>
 			<p>
-				<a href="#">www.linkedin.com/realprofilegoeshere</a>
+				<a href="https://www.linkedin.com/in/kylewatson98/">https://www.linkedin.com/in/kylewatson98/</a>
 			</p>
 		</section>
 	</main>
