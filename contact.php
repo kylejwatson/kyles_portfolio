@@ -49,12 +49,18 @@
 				<a href="https://www.github.com/kylewatson98">www.github.com/kylewatson98</a>
 			</p>
 		</section>
-		<section id="linkedin">
-			<h3><span class="fa fa-linkedin-square" aria-hidden="true"></span>  LinkedIn</h3>
-			<p>
-				<a href="https://www.linkedin.com/in/kylewatson98/">https://www.linkedin.com/in/kylewatson98/</a>
-			</p>
-		</section>
+        <section id="linkedin">
+            <h3><span class="fa fa-linkedin-square" aria-hidden="true"></span>  LinkedIn</h3>
+            <p>
+                <a href="https://www.linkedin.com/in/kylewatson98/">https://www.linkedin.com/in/kylewatson98/</a>
+            </p>
+        </section>
+        <section id="twitter">
+            <h3><span class="fa fa-twitter-square" aria-hidden="true"></span>  Twitter</h3>
+            <p>
+                <a href="https://twitter.com/kylewatson98">https://twitter.com/kylewatson98/</a>
+            </p>
+        </section>
 	</main>
 	<!-- Content ends here -->
 	<footer id="contact">
